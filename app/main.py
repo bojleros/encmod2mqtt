@@ -159,6 +159,7 @@ class Encmod:
             tmp_frame[3] = int(tmp_frame[3], 16)
         except:
             msg("Broken frame : %s" % tmp_frame)
+            return
 
         if crc != tmp_frame[3]:
             msg("Crc error , malformed frames are ingored")
